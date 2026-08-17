@@ -2,13 +2,24 @@
 
 ## Соревнование
 - https://www.kaggle.com/competitions/kaggriculture (overview / rules / discussion / leaderboard)
-- Правила: 5 сабмитов/день, активны 2 последних, no ingress/egress в эпизоде,
-  победители открывают код (CC-BY 4.0).
+- Локальный аудит на 2026-08-17: `docs/competition/README.md`,
+  `docs/competition/rules-audit.md`, `docs/competition/official-rules-extract.md`.
+- Скрытые условия: 5 сабмитов/день, до 2 финальных (Overview: последние 2),
+  no ingress/egress, команда ≤5, запрет приватного sharing вне команды,
+  winner code CC-BY 4.0 + воспроизводимое описание.
+- Runtime: `actTimeout=1`, общий overage-bank 60 сек; 100 MiB, 8 GiB HDD,
+  6.5 GiB RAM, 1.6 vCPU.
 
 ## Движок (источник истины)
 - PyPI: `kaggle-environments` (локально установлен, v1.32.7)
 - GitHub: https://github.com/Kaggle/kaggle-environments/tree/master/kaggle_environments/envs/kaggriculture
-- Локальная копия: `env/kaggriculture.py` (1086 строк), `env/README-engine.md`, `env/AGENTS-engine.md`
+- Официальный Data-пакет: `competition-data/README.md`,
+  `competition-data/AGENTS.md`.
+- Локальная копия движка: `env/kaggriculture.py` (1086 строк),
+  `env/kaggriculture.json`; прежние копии docs: `env/README-engine.md`,
+  `env/AGENTS-engine.md`.
+- Все файлы побайтово сверены 2026-08-17 с upstream commit
+  `28b6d8af3ce73926b3d0fda1410c1ddd8384ab8c`; хеши: `docs/competition/SHA256SUMS`.
 
 ## Данные
 - Ежедневные топ-реплеи (IL/RL): https://www.kaggle.com/datasets/kaggle/kaggriculture-episodes-index

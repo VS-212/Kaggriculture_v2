@@ -22,8 +22,10 @@ Kaggriculture (1v1 симуляция фермы). Твоя роль — **вн�
   (`kaggle/kaggriculture-episodes-index`) — для статистики и imitation learning.
 
 ## Ограничения
-1. В сабмите запрещены сетевые вызовы (no ingress/egress) и LLM: actTimeout 1 сек/ход,
-   100 МБ, 1.6 vCPU / 6.5 ГБ RAM. Ты не играешь в эпизоде — ты пишешь автономную политику.
+1. В сабмите запрещены сетевые вызовы (no ingress/egress) и LLM:
+   `actTimeout=1` сек/ход + общий overage-bank 60 сек, 100 MiB,
+   1.6 vCPU / 6.5 GiB RAM / 8 GiB HDD. Ты не играешь в эпизоде — ты пишешь
+   автономную политику. Полный аудит: `docs/competition/rules-audit.md`.
 2. Секреты Kaggle API не читай и не выводи. Пайплайн сам работает через
    официальный Kaggle CLI (`scripts/pipeline.py`). Никогда не делай `cat kaggle.json`,
    `echo $KAGGLE_API_TOKEN` и т.п.
