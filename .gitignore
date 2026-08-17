@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+data/
+build/
+
+# секреты — никогда не коммитить (см. docs/SECURITY.md)
+kaggle.json
+access_token
+.env
+.env.*
+*.token
+*.pem
+*.key
+credentials*
+secrets*
